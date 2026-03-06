@@ -1,6 +1,6 @@
 // Countdown timer — Tapa blanda: 30 de marzo 2026
 (function () {
-    const launchDate = new Date('2026-03-30T00:00:00').getTime();
+    const launchDate = new Date('2026-03-12T00:00:00').getTime();
     const section = document.querySelector('.countdown-section');
     const daysEl = document.getElementById('cd-days');
     const hoursEl = document.getElementById('cd-hours');
