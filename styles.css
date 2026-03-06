@@ -355,6 +355,201 @@ h1 {
     50% { opacity: 1; }
 }
 
+/* Countdown Section */
+.countdown-section {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, var(--dark) 0%, var(--dark-blue) 50%, var(--dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+}
+
+.countdown-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.countdown-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.countdown-eyebrow {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--secondary);
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 6px 16px;
+    border: 1px solid var(--secondary);
+    border-left: 4px solid var(--secondary);
+    background: rgba(255, 0, 85, 0.05);
+    margin-bottom: 24px;
+}
+
+.countdown-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.countdown-subtitle {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    margin-bottom: 40px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    padding: 20px 16px;
+    background: rgba(10, 14, 26, 0.8);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    position: relative;
+}
+
+.countdown-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.countdown-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+.countdown-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+.countdown-separator {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    opacity: 0.6;
+    animation: separatorPulse 1s ease-in-out infinite;
+}
+
+@keyframes separatorPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.15; }
+}
+
+.countdown-cta {
+    margin-top: 8px;
+}
+
+/* Countdown launched state */
+.countdown-section.launched .countdown {
+    display: none;
+}
+
+.countdown-launched-msg {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 32px;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+/* Countdown responsive */
+@media (max-width: 640px) {
+    .countdown {
+        gap: 6px;
+    }
+
+    .countdown-block {
+        min-width: 70px;
+        padding: 14px 8px;
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+    }
+
+    .countdown-separator {
+        font-size: 1.8rem;
+    }
+
+    .countdown-title {
+        font-size: 1.5rem;
+    }
+
+    .countdown-section {
+        padding: 60px 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .countdown-block {
+        min-width: 60px;
+        padding: 12px 6px;
+    }
+
+    .countdown-number {
+        font-size: 1.6rem;
+    }
+
+    .countdown-separator {
+        font-size: 1.4rem;
+    }
+
+    .countdown-label {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+
+    .countdown-title {
+        font-size: 1.3rem;
+    }
+}
+
 /* Features Section */
 .features {
     padding: 100px 20px;
